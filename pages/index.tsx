@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
 
-const supabaseUrl = 'https://katkzhgmwoqfjrdvgtqr.supabase.co'
+//const supabaseUrl = 'https://katkzhgmwoqfjrdvgtqr.supabase.co'
 //const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthdGt6aGdtd29xZmpyZHZndHFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIxNjg2OTgsImV4cCI6MTk4Nzc0NDY5OH0.ymjFIHRU9wi9HzaYbQH22ESIJz_S4lGyuHr_DjPLU4g'
-const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROLE_KEY || '')
+//const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROLE_KEY || '')
 
 //const supabaseAdmin = createClient(
 //  process.env.NEXT_PUBLIC_SUPABASE_URL || '',
@@ -13,6 +13,10 @@ const supabaseAdmin = createClient(supabaseUrl, process.env.SUPABASE_SERVICE_ROL
 //);
 
 export async function getStaticProps() {
+  const supabaseAdmin = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL || '',
+    process.env.SUPABASE_SERVICE_ROLE_KEY || ''
+  );
   //await supabaseAdmin.from('images').insert([{
   //  name: 'Pedro Duarte',
   //  href: 'https://twitter.com/peduarte/status/1463897468383412231',
