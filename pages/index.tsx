@@ -7,8 +7,8 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const supabaseUrl = process.env. SUPABASE_URL || '';
-const supabaseKey = process.env. SUPABASE_KEY || '';
+const supabaseUrl = process.env.SUPABASE_URL || '';
+const supabaseKey = process.env.SUPABASE_KEY || '';
 const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
 export async function getStaticProps() {
