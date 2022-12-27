@@ -24,6 +24,13 @@ export async function getStaticProps() {
   //    height: 600,
   //  },
   //})
+
+  //await supabaseAdmin.from('images').insert([{
+  //  name: 'Pedro Duarte',
+  //  href: 'https://twitter.com/peduarte/status/1463897468383412231',
+  //  username: '@peduarte',
+  //  imageSrc: 'https://pbs.twimg.com/media/FFDOtLkWYAsWjTM?format=jpg',
+  //}]);
   const { data } = await supabaseAdmin.from('images').select('*');
   return {
     props: {
