@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
+import  dotenv  from 'dotenv';
 
+//const dotenv = require('dotenv');
 
-const dotenv = require('dotenv');
 
 dotenv.config();
 
