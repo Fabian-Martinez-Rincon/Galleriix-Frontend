@@ -1,13 +1,9 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
-import  dotenv  from 'dotenv';
 
-//const dotenv = require('dotenv');
-dotenv.config();
-
-const supabaseUrl = process.env.SUPABASE_URL || '';
-const supabaseKey = process.env.SUPABASE_KEY || '';
+const supabaseUrl = 'https://katkzhgmwoqfjrdvgtqr.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthdGt6aGdtd29xZmpyZHZndHFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIxNjg2OTgsImV4cCI6MTk4Nzc0NDY5OH0.ymjFIHRU9wi9HzaYbQH22ESIJz_S4lGyuHr_DjPLU4g';
 const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
 export async function getStaticProps() {
