@@ -3,16 +3,16 @@ import { useState } from 'react';
 import { createClient } from '@supabase/supabase-js';
 
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
-export const supabaseAdmin = createClient(supabaseUrl, supabaseAnonKey)
+
 
 //const supabaseUrl = 'https://katkzhgmwoqfjrdvgtqr.supabase.co';
 //const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImthdGt6aGdtd29xZmpyZHZndHFyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzIxNjg2OTgsImV4cCI6MTk4Nzc0NDY5OH0.ymjFIHRU9wi9HzaYbQH22ESIJz_S4lGyuHr_DjPLU4g';
 //const supabaseAdmin = createClient(supabaseUrl, supabaseKey);
 
 export async function getStaticProps() {
-
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
+  const supabaseAdmin = createClient(supabaseUrl, supabaseAnonKey)
   const { data } = await supabaseAdmin.from('images').select('*');
   return {
     props: {
