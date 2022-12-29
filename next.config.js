@@ -2,7 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['pbs.twimg.com'],
+    domains: ['katkzhgmwoqfjrdvgtqr.supabase.co'],
   },
 }
 //katkzhgmwoqfjrdvgtqr.supabase.co
