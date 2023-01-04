@@ -41,3 +41,15 @@ const supabaseAdmin = createClient(
     imageSrc: 'https://pbs.twimg.com/media/FFDOtLkWYAsWjTM?format=jpg',
   }]);
 ```
+---
+
+```javascript
+json.forEach(async (item) => {
+  await supabaseAdmin.from('images').insert([{
+    name: item.name,
+    href: item.url.publicUrl,
+    username: '@nomadiix',
+    imageSrc: item.url.publicUrl
+  }]);
+});
+```
