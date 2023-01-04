@@ -4,6 +4,9 @@ import { createClient } from '@supabase/supabase-js';
 import json from '../images.json'
 
 
+// Usage
+
+
 
 type ImageJson = {
   name: string
@@ -46,7 +49,7 @@ export default function Gallery({ images }: { images: Image[] }) {
   console.log('Dios: ',json[0].name)
   return (
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h4 className="mt-1 mb-10 text-5xl font-medium text-gray-100 flex flex-col items-center border-slate-600 border-y-4"> NOMADIIX-LOGOS </h4>
+      <a href = 'https://www.instagram.com/nomadiixlogos/' className="mt-1 mb-10 text-5xl font-medium text-gray-100 flex flex-col items-center border-slate-600 border-y-4 hover:opacity-75 duration-700 ease-in-out"> NOMADIIX-LOGOS </a>
       <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         
         {images.map((image) => (
