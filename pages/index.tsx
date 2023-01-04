@@ -18,14 +18,14 @@ export async function getStaticProps() {
   const supabaseAdmin = createClient(supabaseUrl, supabaseAnonKey)
   const { data } = await supabaseAdmin.from('images').select('*');
 
-  json.forEach(async (item) => {
-    await supabaseAdmin.from('images').insert([{
-      name: item.name,
-      href: item.url.publicUrl,
-      username: '@nomadiix',
-      imageSrc: item.url.publicUrl
-    }]);
-  });
+  //json.forEach(async (item) => {
+  //  await supabaseAdmin.from('images').insert([{
+  //    name: item.name,
+  //    href: item.url.publicUrl,
+  //    username: '@nomadiix',
+  //    imageSrc: item.url.publicUrl
+  //  }]);
+  //});
   
 
   return {
