@@ -73,7 +73,7 @@ function BlurImage({ image }: { image: Image }) {
   return (
     <a href={image.href} className="group flex justify-center items-center flex-col text-center">
       
-      <div className="w-full border-slate-600 border-y-4 aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 rounded-full overflow-hidden">
+      <div className="w-full border border-y-4 aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden  rounded-full ">
         
         <Image
           alt=""
