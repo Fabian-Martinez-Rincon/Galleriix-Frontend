@@ -49,7 +49,7 @@ export default function Gallery({ images }: { images: Image[] }) {
   console.log('Dios: ',json[0].name)
   return (
     <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <a href = 'https://www.instagram.com/nomadiixlogos/' className="mt-1 mb-10 text-5xl font-medium text-gray-100 flex flex-col items-center border-slate-600 border-y-4 hover:opacity-75 duration-700 ease-in-out"> NOMADIIX-LOGOS </a>
+      <a href = 'https://www.instagram.com/nomadiixlogos/' className="mt-1 mb-10 text-5xl font-medium text-gray-100 flex flex-col items-center border-slate-600 border-y-4 hover:opacity-75 duration-700 ease-in-out "> NOMADIIX-LOGOS </a>
       <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
         
         {images.map((image) => (
@@ -71,9 +71,9 @@ function BlurImage({ image }: { image: Image }) {
   const [isLoading, setLoading] = useState(true);
 
   return (
-    <a href={image.href} className="group ">
+    <a href={image.href} className="group flex justify-center items-center flex-col text-center">
       
-      <div className="w-full border-slate-600 border-y-4 aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8">
+      <div className="w-full border-slate-600 border-y-4 aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-7 xl:aspect-h-8 rounded-full overflow-hidden">
         
         <Image
           alt=""
@@ -89,7 +89,7 @@ function BlurImage({ image }: { image: Image }) {
           onLoadingComplete={() => setLoading(false)}
         />
       </div>
-      <h3 className="mt-4 text-sm text-gray-100">{image.name}</h3>
+      <h3 className="mt-4 text-sm text-gray-100 ">{image.name}</h3>
       <p className="mt-1 text-lg font-medium text-gray-100">{image.username}</p>
     </a>
   );
